@@ -1,0 +1,1477 @@
+@media (max-width: 88em) {
+    .nav-links {
+        gap: 1.6rem;
+    }
+
+    .nav-link:link,
+    .nav-link:visited {
+        font-size: 1.4rem;
+    }
+
+    .get-help-hero-content,
+    .what-we-do-hero-grid,
+    .talitha-koum-hero-content,
+    .who-we-are-hero-content,
+    .get-involved-hero-content,
+    .staying-safe-hero-content,
+    .shop-church-hero-content {
+        gap: 5rem;
+    }
+
+    .help-contact-card {
+        padding: 4rem;
+    }
+}
+
+@media (min-width: 75.0625em) {
+    .get-help-intro,
+    .what-we-do-hero-copy,
+    .talitha-koum-hero-copy,
+    .who-we-are-hero-copy,
+    .get-involved-hero-copy,
+    .staying-safe-hero-copy,
+    .shop-church-hero-copy {
+        transform: translateY(-5rem);
+    }
+}
+
+@media (min-width: 88em) and (max-width: 100em) {
+    .nav {
+        padding-inline: 2rem;
+    }
+
+    .nav-logo {
+        height: 8rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-link:link,
+    .nav-link:visited {
+        font-size: 1.6rem;
+    }
+
+    .number {
+        font-size: 1.4rem;
+    }
+
+    .nav .btns {
+        display: flex;
+        gap: 0.8rem;
+    }
+
+    .nav .btns .btn:link,
+    .nav .btns .btn:visited {
+        padding: 0.8rem 1.2rem;
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 88em) {
+    .get-help-hero::after,
+    .what-we-do-hero::before,
+    .talitha-koum-hero::before,
+    .who-we-are-hero::before,
+    .get-involved-hero::before,
+    .shop-church-hero::before {
+        display: none;
+    }
+
+    .nav {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto auto;
+        gap: 0 2rem;
+        max-height: calc(100svh - 4.5rem);
+        overflow-y: auto;
+    }
+
+    .nav > a:first-child {
+        justify-self: start;
+    }
+
+    .js .mobile-help-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        justify-self: end;
+        height: 4rem;
+        padding: 0 1.6rem;
+        line-height: 1;
+        white-space: nowrap;
+    }
+
+    .js .mobile-nav-toggle {
+        display: inline-flex;
+        height: 4rem;
+        padding-block: 0;
+        font-size: 1.6rem;
+        line-height: 1;
+    }
+
+    .mobile-nav-toggle-label {
+        line-height: 1;
+    }
+
+    .js .nav-links,
+    .js .nav .btns {
+        display: none;
+    }
+
+    .nav--open .nav-links {
+        display: flex;
+        grid-column: 1 / -1;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        width: 100%;
+        margin-top: 1rem;
+        padding: 1.5rem 0 1rem;
+        border-top: 1px solid var(--color-gray);
+    }
+
+    .nav--open .nav-link:link,
+    .nav--open .nav-link:visited {
+        display: flex;
+        align-items: baseline;
+        gap: 1rem;
+        width: 100%;
+        padding: 1.2rem 0;
+        font-size: 1.7rem;
+    }
+
+    .nav--open .nav-link:hover,
+    .nav--open .nav-link:active {
+        transform: none;
+    }
+
+    .nav--open .btns {
+        display: flex;
+        grid-column: 1 / -1;
+        gap: 1.2rem;
+        padding: 0 0 2rem;
+    }
+
+    .nav--open .btns .btn {
+        flex: 1;
+        text-align: center;
+    }
+}
+
+@media (max-width: 75em) {
+    .hero-content {
+        gap: 5rem;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(5rem, 5vw, 7rem);
+    }
+
+    main [class] h2 {
+        font-size: clamp(4rem, 7vw, 4.8rem);
+    }
+
+    .get-help-hero-content,
+    .reach-out-content {
+        grid-template-columns: 1fr;
+        gap: 7rem;
+    }
+
+    .get-help-intro {
+        max-width: 92rem;
+    }
+
+    .help-contact-card {
+        width: 100%;
+        max-width: 76rem;
+    }
+
+    .reach-out-heading {
+        position: static;
+        max-width: 90rem;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .what-we-do-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 8rem;
+    }
+
+    .what-we-do-hero-copy {
+        max-width: 100rem;
+    }
+
+    .what-we-do-hero-visual {
+        width: 100%;
+        max-width: 90rem;
+        margin: 0 auto;
+    }
+
+    .support-journey {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .talitha-koum-hero-content {
+        grid-template-columns: 1fr;
+        gap: 8rem;
+    }
+
+    .talitha-koum-hero-copy {
+        max-width: 100rem;
+    }
+
+    .talitha-koum-hero-visual {
+        width: 100%;
+        max-width: 100rem;
+        margin: 0 auto;
+    }
+
+    .campus-story-heading {
+        gap: 7rem;
+    }
+
+    .who-we-are-hero-content {
+        grid-template-columns: 1fr;
+        gap: 8rem;
+    }
+
+    .who-we-are-hero-copy {
+        max-width: 100rem;
+    }
+
+    .who-we-are-hero-visual {
+        width: 100%;
+        max-width: 80rem;
+        margin: 0 auto;
+    }
+
+    .get-involved-hero-content {
+        grid-template-columns: 1fr;
+        gap: 8rem;
+    }
+
+    .get-involved-hero-copy {
+        max-width: 100rem;
+    }
+
+    .get-involved-hero-visual {
+        width: 100%;
+        max-width: 80rem;
+        margin: 0 auto;
+    }
+
+    .staying-safe-hero-content {
+        grid-template-columns: 1fr;
+        gap: 8rem;
+    }
+
+    .staying-safe-hero-copy {
+        max-width: 100rem;
+    }
+
+    .staying-safe-contact-card {
+        width: 100%;
+        max-width: 80rem;
+        margin: 0 auto;
+    }
+
+    .shop-church-hero-content {
+        grid-template-columns: 1fr;
+        gap: 8rem;
+    }
+
+    .shop-church-hero-copy {
+        max-width: 100rem;
+    }
+
+    .shop-church-hero-visual {
+        width: 100%;
+        max-width: 80rem;
+        margin: 0 auto;
+    }
+
+}
+
+@media (max-width: 59em) {
+    .hero-section {
+        padding: 20rem 0 8rem;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 7rem;
+    }
+
+    .hero-text {
+        max-width: 72rem;
+        margin: 0 auto;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 68rem;
+        margin: 0 auto;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .stats-cell,
+    .stats-cell:not(:last-child) {
+        border-right: 1px solid var(--color-gray);
+        border-bottom: 1px solid var(--color-gray);
+    }
+
+    .stats-cell:nth-child(2n) {
+        border-right: 0;
+    }
+
+    .stats-cell:last-child {
+        grid-column: 1 / -1;
+        border-right: 0;
+        border-bottom: 0;
+    }
+
+    .help-grid,
+    .talitha-koum-grid,
+    .links-section-content,
+    .new-chapter-content {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 5rem;
+    }
+
+    .help-cell {
+        min-width: 0;
+    }
+
+    .help-cell .contact-link {
+        overflow-wrap: anywhere;
+    }
+
+    .talitha-koum-section,
+    .between-the-hard-days-section,
+    .testimony-section {
+        margin-top: 0;
+    }
+
+    .link-card {
+        min-height: 38rem;
+        padding: 4rem;
+        aspect-ratio: auto;
+    }
+
+    .get-help-hero {
+        padding: 8rem 0;
+    }
+
+    .what-we-do-hero {
+        padding: 8rem 0 11rem;
+    }
+
+    .talitha-koum-hero {
+        padding: 8rem 0 12rem;
+    }
+
+    .who-we-are-hero {
+        padding: 8rem 0 12rem;
+    }
+
+    .get-involved-hero {
+        padding: 8rem 0 12rem;
+    }
+
+    .staying-safe-hero {
+        padding: 8rem 0 12rem;
+    }
+
+    .shop-church-hero {
+        padding: 8rem 0 12rem;
+    }
+
+    .announcement-bar {
+        grid-template-columns: 1fr auto;
+    }
+
+    .announcement-message {
+        display: none;
+    }
+
+    .immediate-help-content,
+    .safety-guide-content {
+        grid-template-columns: 1fr;
+        gap: 5rem;
+    }
+
+    .statewide-contact {
+        padding: 3rem 0 0;
+        border-top: 1px solid var(--color-gray);
+        border-left: 0;
+    }
+
+    .reach-out-section,
+    .safety-guide-section,
+    .contact-reminder-section {
+        padding: 9rem 0;
+    }
+
+    .safety-guide-content {
+        align-items: start;
+    }
+
+    .contact-reminder-actions {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .support-journey-heading,
+    .whole-life-support-heading,
+    .ordinary-life-grid,
+    .what-we-do-cta-content {
+        grid-template-columns: 1fr;
+        gap: 5rem;
+    }
+
+    .support-journey-heading > .description,
+    .whole-life-support-heading > .description,
+    .what-we-do-cta-action {
+        padding: 3rem 0 0;
+        border-top: 1px solid var(--color-gray);
+        border-left: 0;
+    }
+
+    .whole-life-support-grid,
+    .how-we-work-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ordinary-life-photo {
+        min-height: 58rem;
+    }
+
+    .how-we-work-card {
+        min-height: 0;
+    }
+
+    .how-we-work-card--raised {
+        margin-top: 0;
+    }
+
+    .what-we-do-cta-action {
+        border-color: var(--color-teal);
+    }
+
+    .restorative-community-grid,
+    .campus-spaces-heading,
+    .campus-community-heading,
+    .campus-access-content {
+        grid-template-columns: 1fr;
+        gap: 5rem;
+    }
+
+    .campus-story-heading,
+    .campus-story-layout {
+        grid-template-columns: 1fr;
+        gap: 5rem;
+    }
+
+    .campus-spaces-heading > .description,
+    .campus-story-heading > .description,
+    .campus-community-heading > .description,
+    .campus-access-action {
+        padding: 3rem 0 0;
+        border-top: 1px solid var(--color-gray);
+        border-left: 0;
+    }
+
+    .campus-spaces-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .campus-spaces-grid .campus-space-card {
+        border-right: 0;
+        border-bottom: 1px solid rgba(172, 191, 196, 0.13);
+    }
+
+    .campus-space-card:last-child {
+        border-bottom: 0;
+    }
+
+    .campus-story-image {
+        width: calc(100% - 6rem);
+        height: 62rem;
+    }
+
+    .campus-story-chapters {
+        margin: -12rem 0 0 6rem;
+    }
+
+    .campus-community-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: 38rem 32rem 32rem 36rem;
+    }
+
+    .campus-community-photo--team {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .campus-community-photo--painting {
+        grid-column: 1 / 2;
+        grid-row: 2 / 4;
+    }
+
+    .campus-community-photo--electrical {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+
+    .campus-community-photo--cleaning {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+    }
+
+    .campus-community-photo--kitchen {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+
+    .campus-community-photo--playground {
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+    }
+
+    .campus-access-action {
+        border-color: var(--color-teal);
+    }
+
+    .copyright {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .origin-story-grid,
+    .who-timeline-heading,
+    .who-next-chapter-content {
+        grid-template-columns: 1fr;
+        gap: 5rem;
+    }
+
+    .who-timeline-heading > .description,
+    .who-next-chapter-action {
+        padding: 3rem 0 0;
+        border-top: 1px solid var(--color-gray);
+        border-left: 0;
+    }
+
+    .who-timeline-heading > .description {
+        border-color: rgba(247, 249, 249, 0.4);
+    }
+
+    .who-timeline {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .who-timeline .who-timeline-item {
+        border-right: 1px solid rgba(247, 249, 249, 0.35);
+        border-bottom: 1px solid rgba(247, 249, 249, 0.35);
+    }
+
+    .who-timeline-item:nth-child(2n) {
+        border-right: 0;
+    }
+
+    .who-timeline-item:nth-last-child(-n + 2) {
+        border-bottom: 0;
+    }
+
+    .who-guides-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .who-guide-card {
+        min-height: 0;
+    }
+
+    .origin-story-image {
+        height: 60rem;
+    }
+
+    .involvement-ways-heading,
+    .giving-impact-heading,
+    .involvement-connect-content {
+        grid-template-columns: 1fr;
+        gap: 5rem;
+    }
+
+    .involvement-ways-heading > .description,
+    .giving-impact-intro,
+    .involvement-connect-action {
+        padding: 3rem 0 0;
+        border-top: 1px solid var(--color-gray);
+        border-left: 0;
+    }
+
+    .giving-impact-intro {
+        border-color: rgba(247, 249, 249, 0.4);
+    }
+
+    .giving-impact-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .giving-impact-grid .giving-impact-card {
+        border-right: 1px solid rgba(247, 249, 249, 0.35);
+        border-bottom: 1px solid rgba(247, 249, 249, 0.35);
+    }
+
+    .giving-impact-card:nth-child(2n) {
+        border-right: 0;
+    }
+
+    .giving-impact-card:nth-last-child(-n + 2) {
+        border-bottom: 0;
+    }
+
+    .digital-safety-heading,
+    .personal-plan-heading,
+    .leaving-checklist-content {
+        grid-template-columns: 1fr;
+        gap: 5rem;
+    }
+
+    .digital-safety-heading > .description,
+    .personal-plan-heading > .description {
+        padding: 3rem 0 0;
+        border-top: 1px solid var(--color-gray);
+        border-left: 0;
+    }
+
+    .personal-plan-heading > .description {
+        border-color: rgba(247, 249, 249, 0.4);
+    }
+
+    .personal-plan-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .personal-plan-grid .personal-plan-card {
+        border-right: 1px solid var(--color-gray);
+        border-bottom: 1px solid var(--color-gray);
+    }
+
+    .personal-plan-card:nth-child(2n) {
+        border-right: 0;
+    }
+
+    .personal-plan-card:nth-last-child(-n + 2) {
+        border-bottom: 0;
+    }
+
+    .shop-welcome-heading,
+    .shop-story-grid,
+    .shop-visit-content {
+        grid-template-columns: 1fr;
+        gap: 5rem;
+    }
+
+    .shop-welcome-heading > .description,
+    .shop-visit-details {
+        padding: 3rem 0 0;
+        border-top: 1px solid var(--color-gray);
+        border-left: 0;
+    }
+
+    .shop-visit-details {
+        border-color: var(--color-teal);
+    }
+
+    .shop-welcome-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .shop-welcome-card {
+        min-height: 0;
+    }
+
+    .shop-story-image {
+        height: 60rem;
+    }
+
+    .shop-community-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: 52rem 38rem;
+    }
+
+    .shop-community-photo--teaching {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .shop-community-photo--together {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    .shop-community-photo--service {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+
+}
+
+@media (max-width: 38em) {
+    .site-container {
+        width: calc(100% - 4rem);
+    }
+
+    .hero-section {
+        padding: 17rem 0 7rem;
+    }
+
+    .nav {
+        padding-inline: 2rem;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(5rem, 15vw, 6.4rem);
+    }
+
+    .description,
+    .hero-text > .description {
+        font-size: 2.1rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin: 4rem 0;
+    }
+
+    .hero-actions .btn,
+    .centered .btn {
+        width: 100%;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-cell,
+    .stats-cell:not(:last-child),
+    .stats-cell:nth-child(2n),
+    .stats-cell:last-child {
+        grid-column: auto;
+        border-right: 0;
+        border-bottom: 1px solid var(--color-gray);
+    }
+
+    .stats-cell:last-child {
+        border-bottom: 0;
+    }
+
+    .service {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .talitha-koum-section,
+    .between-the-hard-days-section,
+    .testimony-section {
+        margin-top: 0;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .link-card {
+        min-height: 34rem;
+        padding: 3rem 2.5rem;
+    }
+
+    .testimony-header {
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .disclaimer {
+        text-align: right;
+    }
+
+    .large-quote {
+        font-size: 4rem;
+    }
+
+    .testimony-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimony-card,
+    .testimony-card + .testimony-card {
+        padding: 3rem 0;
+        border-left: 0;
+    }
+
+    .testimony-card + .testimony-card {
+        border-top: 1px solid var(--color-gray);
+    }
+
+    .announcement-bar {
+        gap: 1rem;
+        padding: 0.8rem 2rem;
+        font-size: 1.2rem;
+    }
+
+    .emergency-message {
+        white-space: normal;
+    }
+
+    .quick-exit {
+        padding: 0.7rem 1rem;
+    }
+
+    .nav-logo {
+        height: 5rem;
+    }
+
+    .nav {
+        gap: 0 1rem;
+    }
+
+    .js .mobile-help-link {
+        padding: 0 1.2rem;
+        font-size: 1.3rem;
+    }
+
+    .mobile-nav-toggle {
+        gap: 0;
+        padding: 0 1rem;
+        font-size: 1.3rem;
+    }
+
+    .mobile-nav-toggle-label {
+        display: none;
+    }
+
+    .get-help-main,
+    .what-we-do-main,
+    .talitha-koum-main,
+    .who-we-are-main,
+    .get-involved-main,
+    .staying-safe-main,
+    .shop-church-main {
+        padding-top: 14rem;
+    }
+
+    .get-help-hero {
+        min-height: calc(100svh - 14rem);
+        padding: 6rem 0;
+    }
+
+    .what-we-do-hero,
+    .talitha-koum-hero,
+    .who-we-are-hero,
+    .get-involved-hero,
+    .staying-safe-hero,
+    .shop-church-hero {
+        min-height: calc(100svh - 14rem);
+    }
+
+    .get-help-hero-content {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 5rem;
+    }
+
+    .get-help-intro h1,
+    .what-we-do-hero-copy h1,
+    .talitha-koum-hero-copy h1,
+    .who-we-are-hero-copy h1,
+    .get-involved-hero-copy h1,
+    .staying-safe-hero-copy h1,
+    .shop-church-hero-copy h1 {
+        font-size: clamp(5rem, 15vw, 6.8rem);
+    }
+
+    .what-we-do-hero-actions,
+    .talitha-koum-hero-actions,
+    .who-we-are-hero-actions,
+    .get-involved-hero-actions,
+    .staying-safe-hero-actions,
+    .shop-church-hero-actions,
+    .what-we-do-hero-actions .btn,
+    .talitha-koum-hero-actions .btn,
+    .who-we-are-hero-actions .btn,
+    .get-involved-hero-actions .btn,
+    .staying-safe-hero-actions .btn,
+    .shop-church-hero-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .talitha-koum-hero-image {
+        box-shadow: 1rem 1rem 0 var(--color-green);
+    }
+
+    .talitha-koum-hero-verse {
+        bottom: -4rem;
+        left: 1.5rem;
+        width: min(28rem, calc(100% - 1.5rem));
+        padding: 2rem;
+        font-size: 2rem;
+    }
+
+    .what-we-do-hero-visual {
+        min-height: 54rem;
+    }
+
+    .what-we-do-photo--main {
+        width: 86%;
+        height: 48rem;
+        box-shadow: 1rem 1rem 0 var(--color-green);
+    }
+
+    .what-we-do-photo--secondary {
+        width: 48%;
+        height: 22rem;
+        padding: 0.8rem;
+    }
+
+    .what-we-do-hero-note {
+        right: 0;
+        bottom: -3rem;
+        width: 27rem;
+        padding: 2rem;
+        font-size: 2rem;
+    }
+
+    .description--small,
+    .contact-card-intro {
+        font-size: 2rem;
+    }
+
+    .help-contact-card {
+        padding: 3rem 2.5rem;
+        box-shadow: 1rem 1rem 0 var(--color-yellow);
+    }
+
+    .help-contact-card h2,
+    .reach-out-heading h2,
+    .safety-guide-copy h2,
+    .contact-reminder-content h2 {
+        font-size: clamp(4.4rem, 13vw, 5.8rem);
+    }
+
+    .contact-card-actions,
+    .contact-card-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .immediate-help-intro h2 {
+        font-size: 4.4rem;
+    }
+
+    .reach-out-section,
+    .safety-guide-section,
+    .contact-reminder-section,
+    .support-journey-section,
+    .whole-life-support-section,
+    .ordinary-life-section,
+    .how-we-work-section,
+    .restorative-community-section,
+    .campus-spaces-section,
+    .campus-story-section,
+    .campus-community-section {
+        padding: 7rem 0;
+    }
+
+    .restorative-community-image {
+        height: 48rem;
+    }
+
+    .restorative-community-list li {
+        grid-template-columns: 4rem minmax(0, 1fr);
+        gap: 1.5rem;
+    }
+
+    .campus-spaces-grid,
+    .campus-community-gallery {
+        margin-top: 5rem;
+    }
+
+    .campus-space-card {
+        min-height: 28rem;
+        padding: 3rem 2.5rem;
+    }
+
+    .campus-space-card h3,
+    .campus-story-chapter h3 {
+        font-size: 2.8rem;
+    }
+
+    .campus-story-image {
+        width: 100%;
+        height: 52rem;
+        box-shadow: 1rem 1rem 0 var(--color-green);
+    }
+
+    .campus-story-layout {
+        gap: 0;
+    }
+
+    .campus-story-image figcaption {
+        right: 2rem;
+        bottom: 2rem;
+        left: 2rem;
+        padding: 2rem;
+        font-size: 1.9rem;
+    }
+
+    .campus-story-chapters {
+        margin: 3rem 0 0;
+    }
+
+    .campus-story-chapter {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 3rem 2.5rem;
+    }
+
+    .campus-story-chapter--green,
+    .campus-story-chapter--yellow {
+        margin-left: 0;
+    }
+
+    .campus-community-gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        gap: 1.5rem;
+    }
+
+    .campus-community-photo,
+    .campus-community-photo--team,
+    .campus-community-photo--painting,
+    .campus-community-photo--electrical,
+    .campus-community-photo--cleaning,
+    .campus-community-photo--kitchen,
+    .campus-community-photo--playground {
+        grid-column: 1;
+        grid-row: auto;
+        height: 30rem;
+    }
+
+    .campus-community-photo--painting,
+    .campus-community-photo--electrical,
+    .campus-community-photo--playground {
+        height: 42rem;
+    }
+
+    .campus-access-section {
+        padding: 7rem 0;
+    }
+
+    .campus-access-action .btn {
+        width: 100%;
+    }
+
+    .support-journey {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin-top: 5rem;
+    }
+
+    .support-journey-step {
+        min-height: 12rem;
+    }
+
+    .whole-life-support-card {
+        min-height: 0;
+        padding: 3rem 2.5rem;
+    }
+
+    .whole-life-support-card h3 {
+        font-size: 2.8rem;
+    }
+
+    .ordinary-life-photo {
+        min-height: 46rem;
+    }
+
+    .ordinary-life-caption {
+        right: 1.5rem;
+        bottom: 1.5rem;
+        max-width: calc(100% - 3rem);
+        padding: 2rem;
+        font-size: 2rem;
+    }
+
+    .how-we-work-card {
+        padding: 3rem 2.5rem;
+    }
+
+    .how-we-work-card h3 {
+        margin-top: 3rem;
+        font-size: 3rem;
+    }
+
+    .what-we-do-cta {
+        padding: 7rem 0;
+    }
+
+    .what-we-do-cta-action .btn {
+        width: 100%;
+    }
+
+    .origin-story-section,
+    .who-timeline-section,
+    .who-guides-section,
+    .involvement-ways-section,
+    .giving-impact-section,
+    .digital-safety-section,
+    .personal-plan-section,
+    .leaving-checklist-section,
+    .shop-welcome-section,
+    .shop-story-section,
+    .shop-community-section {
+        padding: 7rem 0;
+    }
+
+    .who-we-are-hero-image {
+        height: 48rem;
+        box-shadow: 1rem 1rem 0 var(--color-green);
+    }
+
+    .origin-story-image {
+        height: 50rem;
+    }
+
+    .origin-story-quote {
+        font-size: 2.6rem;
+    }
+
+    .who-timeline {
+        grid-template-columns: 1fr;
+        margin-top: 5rem;
+    }
+
+    .who-timeline .who-timeline-item {
+        border-right: 0;
+        border-bottom: 1px solid rgba(247, 249, 249, 0.35);
+    }
+
+    .who-timeline-item:last-child {
+        border-bottom: 0;
+    }
+
+    .who-timeline-item {
+        min-height: 0;
+        padding: 3rem 2.5rem;
+    }
+
+    .who-timeline-year {
+        margin-bottom: 3rem;
+    }
+
+    .who-guide-card {
+        padding: 3rem 2.5rem;
+    }
+
+    .who-guide-card h3 {
+        margin-top: 3rem;
+        font-size: 3rem;
+    }
+
+    .who-next-chapter-section {
+        padding: 7rem 0;
+    }
+
+    .who-next-chapter-links,
+    .who-next-chapter-links .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .get-involved-hero-image {
+        height: 48rem;
+        box-shadow: 1rem 1rem 0 var(--color-green);
+    }
+
+    .get-involved-hero-note {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        width: calc(100% - 3rem);
+        margin: -4rem auto 0;
+        padding: 2.2rem;
+        font-size: 2rem;
+    }
+
+    .involvement-ways-grid,
+    .giving-impact-grid {
+        grid-template-columns: 1fr;
+        margin-top: 5rem;
+    }
+
+    .giving-impact-grid .giving-impact-card {
+        border-right: 0;
+        border-bottom: 1px solid rgba(247, 249, 249, 0.35);
+    }
+
+    .giving-impact-card:last-child {
+        border-bottom: 0;
+    }
+
+    .involvement-way-card,
+    .giving-impact-card {
+        min-height: 0;
+        padding: 3rem 2.5rem;
+    }
+
+    .involvement-way-card h3 {
+        margin-top: 3rem;
+        font-size: 3rem;
+    }
+
+    .giving-impact-amount {
+        margin-bottom: 3rem;
+        font-size: 4.8rem;
+    }
+
+    .involvement-connect-links,
+    .involvement-connect-links .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .involvement-connect-section {
+        padding: 7rem 0;
+    }
+
+    .staying-safe-contact-card {
+        padding: 3rem 2.5rem;
+        box-shadow: 1rem 1rem 0 var(--color-green);
+    }
+
+    .staying-safe-contact-card h2 {
+        font-size: clamp(4rem, 12vw, 5.4rem);
+    }
+
+    .staying-safe-contact-item a:link,
+    .staying-safe-contact-item a:visited {
+        font-size: 2.3rem;
+    }
+
+    .digital-safety-grid,
+    .personal-plan-grid {
+        grid-template-columns: 1fr;
+        margin-top: 5rem;
+    }
+
+    .personal-plan-grid .personal-plan-card {
+        border-right: 0;
+        border-bottom: 1px solid var(--color-gray);
+    }
+
+    .personal-plan-card:last-child {
+        border-bottom: 0;
+    }
+
+    .digital-safety-card,
+    .personal-plan-card {
+        min-height: 0;
+        padding: 3rem 2.5rem;
+    }
+
+    .digital-safety-card h3,
+    .personal-plan-card h3 {
+        margin-top: 3rem;
+        font-size: 3rem;
+    }
+
+    .leaving-checklist li {
+        padding-right: 1.5rem;
+    }
+
+    .shop-church-hero-image {
+        height: 48rem;
+        box-shadow: 1rem 1rem 0 var(--color-green);
+    }
+
+    .shop-church-hero-note {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        width: calc(100% - 3rem);
+        margin: -4rem auto 0;
+        padding: 2.2rem;
+    }
+
+    .shop-welcome-card {
+        padding: 3rem 2.5rem;
+    }
+
+    .shop-welcome-card h3 {
+        margin-top: 3rem;
+        font-size: 3rem;
+    }
+
+    .shop-story-image {
+        height: 50rem;
+        box-shadow: -1rem 1rem 0 var(--color-yellow);
+    }
+
+    .shop-story-highlight {
+        font-size: 2.2rem;
+    }
+
+    .shop-community-gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        gap: 1.5rem;
+        margin-top: 5rem;
+    }
+
+    .shop-community-photo,
+    .shop-community-photo--teaching,
+    .shop-community-photo--together,
+    .shop-community-photo--service {
+        grid-column: 1;
+        grid-row: auto;
+        height: 34rem;
+    }
+
+    .shop-community-photo--teaching {
+        height: 44rem;
+    }
+
+    .shop-visit-section {
+        padding: 7rem 0;
+    }
+
+    .shop-visit-details .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .numbered-row {
+        grid-template-columns: 4.5rem minmax(0, 1fr);
+        gap: 1.5rem;
+    }
+
+    .reach-out-step h3 {
+        font-size: 2.8rem;
+    }
+
+    .safety-guide-content .btn--large:link,
+    .safety-guide-content .btn--large:visited,
+    .contact-reminder-actions .btn:link,
+    .contact-reminder-actions .btn:visited {
+        width: 100%;
+        min-width: 0;
+        white-space: normal;
+    }
+
+    footer {
+        padding-top: 7rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 6rem;
+    }
+
+    .footer-help-cell {
+        padding-top: 4rem;
+        padding-left: 0;
+        border-top: 1px solid var(--color-gray);
+        border-left: 0;
+    }
+
+    .copyright {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 7rem;
+    }
+
+    .legal-main {
+        padding: 20rem 0 7rem;
+    }
+
+    .legal-content > h1 {
+        font-size: clamp(5rem, 15vw, 6.8rem);
+    }
+}
+
+@media (max-width: 23em) {
+    .support-journey {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 88em) {
+    .no-js .site-header {
+        position: static;
+    }
+
+    .no-js .nav {
+        display: flex;
+        max-height: none;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .no-js .nav > a {
+        align-self: flex-start;
+    }
+
+    .no-js .nav-links {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        width: 100%;
+        padding: 1.5rem 0;
+        border-top: 1px solid var(--color-gray);
+    }
+
+    .no-js .nav-link:link,
+    .no-js .nav-link:visited {
+        display: block;
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    .no-js .nav .btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.2rem;
+        padding-bottom: 2rem;
+    }
+
+    .no-js .hero-section {
+        padding-top: 8rem;
+    }
+
+    .no-js .get-help-main,
+    .no-js .what-we-do-main,
+    .no-js .talitha-koum-main,
+    .no-js .who-we-are-main,
+    .no-js .get-involved-main,
+    .no-js .staying-safe-main,
+    .no-js .shop-church-main {
+        padding-top: 0;
+    }
+
+    .no-js .legal-main {
+        padding-top: 7rem;
+    }
+}
+
+@media (max-width: 38em) {
+    main [id] {
+        scroll-margin-top: 16rem;
+    }
+}

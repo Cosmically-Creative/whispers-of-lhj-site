@@ -1,0 +1,62 @@
+Options -Indexes
+
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L,NE]
+</IfModule>
+
+<IfModule mod_setenvif.c>
+    SetEnvIf Host "^whispersoflhj\.cosmicallycreative\.com(?::[0-9]+)?$" whispers_staging=1
+</IfModule>
+
+<IfModule mod_alias.c>
+    RedirectMatch 301 ^/html/01(?:/index\.html)?/?$ /get-help/
+    RedirectMatch 301 ^/html/02(?:/index\.html)?/?$ /what-we-do/
+    RedirectMatch 301 ^/html/03(?:/index\.html)?/?$ /talitha-koum/
+    RedirectMatch 301 ^/html/04(?:/index\.html)?/?$ /who-we-are/
+    RedirectMatch 301 ^/html/05(?:/index\.html)?/?$ /get-involved/
+    RedirectMatch 301 ^/html/06(?:/index\.html)?/?$ /staying-safe/
+    RedirectMatch 301 ^/html/07(?:/index\.html)?/?$ /shop-church/
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self' data:; script-src 'self'; style-src 'self'; font-src 'self'; connect-src 'self'; form-action 'self' https://whispersoflhj.networkforgood.com https://whispersoflhj.dm.networkforgood.com"
+    Header always set Permissions-Policy "camera=(), geolocation=(), microphone=()"
+    Header always set Referrer-Policy "no-referrer"
+    Header always set Strict-Transport-Security "max-age=31536000"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "DENY"
+    Header always set X-Robots-Tag "noindex, nofollow, noarchive" env=whispers_staging
+</IfModule>
+
+<IfModule mod_brotli.c>
+    AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/css application/javascript application/json image/svg+xml
+</IfModule>
+
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json image/svg+xml
+</IfModule>
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/html "access plus 0 seconds"
+    ExpiresByType text/css "access plus 0 seconds"
+    ExpiresByType application/javascript "access plus 0 seconds"
+    ExpiresByType image/jpeg "access plus 30 days"
+    ExpiresByType image/png "access plus 30 days"
+    ExpiresByType image/webp "access plus 30 days"
+    ExpiresByType image/avif "access plus 30 days"
+    ExpiresByType font/woff2 "access plus 30 days"
+</IfModule>
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(?:css|js)$">
+        Header set Cache-Control "no-cache, must-revalidate"
+    </FilesMatch>
+    <FilesMatch "\.(?:avif|jpe?g|png|webp|woff2)$">
+        Header set Cache-Control "public, max-age=2592000"
+    </FilesMatch>
+</IfModule>
