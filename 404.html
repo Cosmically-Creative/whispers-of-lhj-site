@@ -2,6 +2,18 @@
 <html lang="en" class="no-js">
     <head>
         <meta charset="UTF-8" />
+        <script>
+            (function () {
+                try {
+                    var navigation = performance.getEntriesByType("navigation")[0];
+                    var type = navigation && navigation.type;
+                    if (type === "back_forward" && sessionStorage.getItem("quick-exit") === "1") {
+                        document.documentElement.hidden = true;
+                        location.replace("https://www.google.com/");
+                    }
+                } catch (error) {}
+            })();
+        </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="referrer" content="no-referrer" />
         <meta name="robots" content="noindex" />

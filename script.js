@@ -3,12 +3,45 @@
 document.documentElement.classList.replace("no-js", "js");
 
 const QUICK_EXIT_URL = "https://www.google.com/";
+const QUICK_EXIT_KEY = "quick-exit";
 const STAGING_HOST = "whispersoflhj.cosmicallycreative.com";
 const MOBILE_NAV_QUERY = window.matchMedia("(max-width: 88em)");
 
+function navigationType() {
+    const navigation = performance.getEntriesByType("navigation")[0];
+    return navigation ? navigation.type : "";
+}
+
 function quickExit() {
+    try {
+        // Remember the exit for this tab so Back cannot reopen the site.
+        sessionStorage.setItem(QUICK_EXIT_KEY, "1");
+    } catch (error) {}
+
+    document.documentElement.hidden = true;
+    if (document.body) document.body.replaceChildren();
     window.location.replace(QUICK_EXIT_URL);
 }
+
+try {
+    if (navigationType() === "back_forward" && sessionStorage.getItem(QUICK_EXIT_KEY) === "1") {
+        document.documentElement.hidden = true;
+        window.location.replace(QUICK_EXIT_URL);
+    }
+} catch (error) {}
+
+window.addEventListener("pageshow", (event) => {
+    if (!event.persisted) return;
+
+    try {
+        if (sessionStorage.getItem(QUICK_EXIT_KEY) !== "1") return;
+    } catch (error) {
+        return;
+    }
+
+    document.documentElement.hidden = true;
+    window.location.replace(QUICK_EXIT_URL);
+});
 
 document.querySelectorAll(".quick-exit").forEach((link) => {
     link.addEventListener("click", (event) => {
@@ -29,6 +62,29 @@ document.addEventListener("keydown", (event) => {
 
     event.preventDefault();
     quickExit();
+});
+
+document.addEventListener("click", (event) => {
+    if (event.defaultPrevented || event.button !== 0) return;
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+    const link = event.target.closest("a[href]");
+    if (!link || link.classList.contains("quick-exit")) return;
+    if (link.target && link.target !== "_self") return;
+    if (link.hasAttribute("download")) return;
+
+    let url;
+    try {
+        url = new URL(link.href);
+    } catch (error) {
+        return;
+    }
+
+    if (url.origin !== window.location.origin) return;
+    if (url.pathname === window.location.pathname && url.search === window.location.search && url.hash) return;
+
+    event.preventDefault();
+    window.location.replace(url.href);
 });
 
 document.querySelectorAll(".nav").forEach((nav) => {
