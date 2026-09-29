@@ -620,23 +620,6 @@
         border-color: rgba(247, 249, 249, 0.4);
     }
 
-    .giving-impact-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .giving-impact-grid .giving-impact-card {
-        border-right: 1px solid rgba(247, 249, 249, 0.35);
-        border-bottom: 1px solid rgba(247, 249, 249, 0.35);
-    }
-
-    .giving-impact-card:nth-child(2n) {
-        border-right: 0;
-    }
-
-    .giving-impact-card:nth-last-child(-n + 2) {
-        border-bottom: 0;
-    }
-
     .digital-safety-heading,
     .personal-plan-heading,
     .leaving-checklist-content {
@@ -1210,23 +1193,12 @@
         font-size: 2rem;
     }
 
-    .involvement-ways-grid,
-    .giving-impact-grid {
+    .involvement-ways-grid {
         grid-template-columns: 1fr;
         margin-top: 5rem;
     }
 
-    .giving-impact-grid .giving-impact-card {
-        border-right: 0;
-        border-bottom: 1px solid rgba(247, 249, 249, 0.35);
-    }
-
-    .giving-impact-card:last-child {
-        border-bottom: 0;
-    }
-
-    .involvement-way-card,
-    .giving-impact-card {
+    .involvement-way-card {
         min-height: 0;
         padding: 3rem 2.5rem;
     }
@@ -1234,11 +1206,6 @@
     .involvement-way-card h3 {
         margin-top: 3rem;
         font-size: 3rem;
-    }
-
-    .giving-impact-amount {
-        margin-bottom: 3rem;
-        font-size: 4.8rem;
     }
 
     .involvement-connect-links,

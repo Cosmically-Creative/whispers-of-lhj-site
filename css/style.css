@@ -2621,9 +2621,8 @@ button:focus-visible {
     padding-top: 3rem;
 }
 
-.giving-impact-section {
-    position: relative;
-    overflow: hidden;
+.giving-impact-heading {
+    margin-bottom: 0;
 }
 
 .giving-impact-heading h2 em {
@@ -2634,56 +2633,6 @@ button:focus-visible {
 .giving-impact-intro {
     align-items: flex-start;
     border-color: rgba(247, 249, 249, 0.4);
-}
-
-.giving-impact-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: transparent;
-    border: 1px solid rgba(247, 249, 249, 0.35);
-    border-radius: 5px;
-}
-
-.giving-impact-card {
-    min-height: 26rem;
-    padding: 4rem;
-    color: var(--color-white);
-    background-color: var(--color-teal);
-    border-right: 1px solid rgba(247, 249, 249, 0.35);
-    border-bottom: 1px solid rgba(247, 249, 249, 0.35);
-}
-
-.giving-impact-card:nth-child(4n) {
-    border-right: 0;
-}
-
-.giving-impact-card:nth-last-child(-n + 4) {
-    border-bottom: 0;
-}
-
-.giving-impact-card--highlight {
-    color: var(--color-black);
-    background-color: var(--color-yellow);
-}
-
-.giving-impact-amount {
-    margin-bottom: 6rem;
-    color: var(--color-yellow);
-    font-family: "Karla", sans-serif;
-    font-size: 5.6rem;
-    font-weight: 500;
-    line-height: 1;
-}
-
-.giving-impact-card--highlight .giving-impact-amount {
-    color: var(--color-teal);
-}
-
-.giving-impact-card p:last-child {
-    line-height: 1.4;
 }
 
 .involvement-connect-section {
