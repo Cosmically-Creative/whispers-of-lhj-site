@@ -14,7 +14,8 @@
     .who-we-are-hero-content,
     .get-involved-hero-content,
     .staying-safe-hero-content,
-    .shop-church-hero-content {
+    .shop-church-hero-content,
+    .event-hero-content {
         gap: 5rem;
     }
 
@@ -300,6 +301,28 @@
         margin: 0 auto;
     }
 
+    .event-hero-content,
+    .event-details-heading {
+        grid-template-columns: 1fr;
+        gap: 5rem;
+    }
+
+    .event-hero-copy {
+        max-width: 100rem;
+    }
+
+    .event-qr {
+        width: min(100%, 42rem);
+        margin: 0 auto;
+    }
+
+    .event-details-heading > .description {
+        padding-top: 3rem;
+        padding-left: 0;
+        border-top: 1px solid var(--color-gray);
+        border-left: 0;
+    }
+
 }
 
 @media (max-width: 59em) {
@@ -399,7 +422,8 @@
         padding: 8rem 0 12rem;
     }
 
-    .shop-church-hero {
+    .shop-church-hero,
+    .event-hero {
         padding: 8rem 0 12rem;
     }
 
@@ -409,6 +433,46 @@
 
     .announcement-message {
         display: none;
+    }
+
+    .announcement-bar--active {
+        grid-template-areas:
+            "emergency exit"
+            "message message";
+    }
+
+    .announcement-bar--active .emergency-message {
+        grid-area: emergency;
+    }
+
+    .announcement-bar--active .quick-exit {
+        grid-area: exit;
+    }
+
+    .announcement-bar--active .announcement-message {
+        display: block;
+        grid-area: message;
+        padding-top: 0.4rem;
+        text-align: center;
+    }
+
+    .event-details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    body:has(.announcement-bar--active) .hero-section {
+        padding-top: 24rem;
+    }
+
+    body:has(.announcement-bar--active) .get-help-main,
+    body:has(.announcement-bar--active) .what-we-do-main,
+    body:has(.announcement-bar--active) .talitha-koum-main,
+    body:has(.announcement-bar--active) .who-we-are-main,
+    body:has(.announcement-bar--active) .get-involved-main,
+    body:has(.announcement-bar--active) .staying-safe-main,
+    body:has(.announcement-bar--active) .shop-church-main,
+    body:has(.announcement-bar--active) .event-main {
+        padding-top: 20rem;
     }
 
     .immediate-help-content,
@@ -857,8 +921,24 @@
     .who-we-are-main,
     .get-involved-main,
     .staying-safe-main,
-    .shop-church-main {
+    .shop-church-main,
+    .event-main {
         padding-top: 14rem;
+    }
+
+    body:has(.announcement-bar--active) .hero-section {
+        padding-top: 21rem;
+    }
+
+    body:has(.announcement-bar--active) .get-help-main,
+    body:has(.announcement-bar--active) .what-we-do-main,
+    body:has(.announcement-bar--active) .talitha-koum-main,
+    body:has(.announcement-bar--active) .who-we-are-main,
+    body:has(.announcement-bar--active) .get-involved-main,
+    body:has(.announcement-bar--active) .staying-safe-main,
+    body:has(.announcement-bar--active) .shop-church-main,
+    body:has(.announcement-bar--active) .event-main {
+        padding-top: 18rem;
     }
 
     .get-help-hero {
@@ -875,6 +955,10 @@
         min-height: calc(100svh - 14rem);
     }
 
+    .event-hero {
+        min-height: 0;
+    }
+
     .get-help-hero-content {
         grid-template-columns: minmax(0, 1fr);
         gap: 5rem;
@@ -886,7 +970,8 @@
     .who-we-are-hero-copy h1,
     .get-involved-hero-copy h1,
     .staying-safe-hero-copy h1,
-    .shop-church-hero-copy h1 {
+    .shop-church-hero-copy h1,
+    .event-hero-copy h1 {
         font-size: clamp(5rem, 15vw, 6.8rem);
     }
 
@@ -896,14 +981,25 @@
     .get-involved-hero-actions,
     .staying-safe-hero-actions,
     .shop-church-hero-actions,
+    .event-hero-actions,
     .what-we-do-hero-actions .btn,
     .talitha-koum-hero-actions .btn,
     .who-we-are-hero-actions .btn,
     .get-involved-hero-actions .btn,
     .staying-safe-hero-actions .btn,
-    .shop-church-hero-actions .btn {
+    .shop-church-hero-actions .btn,
+    .event-hero-actions .btn {
         width: 100%;
         text-align: center;
+    }
+
+    .event-detail-card {
+        min-height: 0;
+        padding: 3rem 2.5rem;
+    }
+
+    .event-detail-card h3 {
+        font-size: 3rem;
     }
 
     .talitha-koum-hero-image {

@@ -7,6 +7,14 @@ const QUICK_EXIT_KEY = "quick-exit";
 const STAGING_HOST = "whispersoflhj.cosmicallycreative.com";
 const MOBILE_NAV_QUERY = window.matchMedia("(max-width: 88em)");
 
+// Flip active to false when there is no event. That clears the
+// announcement and sends anyone on the events page back home.
+const eventAnnouncement = {
+    active: true,
+    label: "Benefit Brunch",
+    date: "Oct 10",
+};
+
 function navigationType() {
     const navigation = performance.getEntriesByType("navigation")[0];
     return navigation ? navigation.type : "";
@@ -50,8 +58,44 @@ document.querySelectorAll(".quick-exit").forEach((link) => {
     });
 });
 
+function directoryDepth() {
+    const path = window.location.pathname;
+    const directory = path.endsWith("/") ? path : path.slice(0, path.lastIndexOf("/") + 1);
+    return directory.split("/").filter(Boolean).length;
+}
+
+function isEventsPage() {
+    return /\/events\/(?:index\.html)?$/.test(window.location.pathname);
+}
+
 if (window.location.hostname === STAGING_HOST) {
     document.body.classList.add("client-preview");
+}
+
+if (!eventAnnouncement.active && isEventsPage()) {
+    document.documentElement.hidden = true;
+    const home = "../".repeat(directoryDepth());
+    window.location.replace(home || "./");
+} else if (eventAnnouncement.active) {
+    const href = `${"../".repeat(directoryDepth())}events/`;
+
+    document.querySelectorAll(".announcement-message").forEach((message) => {
+        const link = document.createElement("a");
+        const date = document.createElement("span");
+
+        link.className = "announcement-link";
+        link.href = href;
+        link.append(eventAnnouncement.label, " ");
+        date.className = "text-yellow";
+        date.textContent = eventAnnouncement.date;
+        link.append(date);
+
+        if (isEventsPage()) link.setAttribute("aria-current", "page");
+
+        message.replaceChildren(link);
+        message.closest(".announcement-bar")?.classList.add("announcement-bar--active");
+    });
+} else if (window.location.hostname === STAGING_HOST) {
     document.querySelectorAll(".announcement-message").forEach((message) => {
         message.textContent = "Client Preview";
     });
