@@ -4,7 +4,6 @@ document.documentElement.classList.replace("no-js", "js");
 
 const QUICK_EXIT_URL = "https://www.google.com/";
 const QUICK_EXIT_KEY = "quick-exit";
-const STAGING_HOST = "whispersoflhj.cosmicallycreative.com";
 const MOBILE_NAV_QUERY = window.matchMedia("(max-width: 88em)");
 
 // Flip active to false when there is no event. That clears the
@@ -68,10 +67,6 @@ function isEventsPage() {
     return /\/events\/(?:index\.html)?$/.test(window.location.pathname);
 }
 
-if (window.location.hostname === STAGING_HOST) {
-    document.body.classList.add("client-preview");
-}
-
 if (!eventAnnouncement.active && isEventsPage()) {
     document.documentElement.hidden = true;
     const home = "../".repeat(directoryDepth());
@@ -94,10 +89,6 @@ if (!eventAnnouncement.active && isEventsPage()) {
 
         message.replaceChildren(link);
         message.closest(".announcement-bar")?.classList.add("announcement-bar--active");
-    });
-} else if (window.location.hostname === STAGING_HOST) {
-    document.querySelectorAll(".announcement-message").forEach((message) => {
-        message.textContent = "Client Preview";
     });
 }
 

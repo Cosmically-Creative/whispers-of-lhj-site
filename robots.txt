@@ -1,3 +1,2 @@
-# Staging protection. Replace this file when the public site launches.
 User-agent: *
-Disallow: /
+Allow: /
