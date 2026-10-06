@@ -6,13 +6,20 @@ const QUICK_EXIT_URL = "https://www.google.com/";
 const QUICK_EXIT_KEY = "quick-exit";
 const MOBILE_NAV_QUERY = window.matchMedia("(max-width: 88em)");
 
-// Flip active to false when there is no event. That clears the
-// announcement and sends anyone on the events page back home.
+// Benefit Brunch stays up through Saturday, October 10, 2026, US Central time.
+// endsAt is midnight at the start of Sunday (CDT, UTC−5).
+// After that, the announcement comes down and /events/ sends visitors home.
+// Keep this instant in sync with the events page head script and the .htaccess brunch rule.
 const eventAnnouncement = {
-    active: true,
     label: "Benefit Brunch",
     date: "Oct 10",
+    endsAt: "2026-10-11T05:00:00Z",
 };
+
+function eventIsActive() {
+    const endsAt = Date.parse(eventAnnouncement.endsAt);
+    return Number.isFinite(endsAt) && Date.now() < endsAt;
+}
 
 function navigationType() {
     const navigation = performance.getEntriesByType("navigation")[0];
@@ -67,11 +74,11 @@ function isEventsPage() {
     return /\/events\/(?:index\.html)?$/.test(window.location.pathname);
 }
 
-if (!eventAnnouncement.active && isEventsPage()) {
+if (!eventIsActive() && isEventsPage()) {
     document.documentElement.hidden = true;
     const home = "../".repeat(directoryDepth());
     window.location.replace(home || "./");
-} else if (eventAnnouncement.active) {
+} else if (eventIsActive()) {
     const href = `${"../".repeat(directoryDepth())}events/`;
 
     document.querySelectorAll(".announcement-message").forEach((message) => {

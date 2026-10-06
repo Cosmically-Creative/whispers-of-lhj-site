@@ -55,6 +55,8 @@ The website has no build process, package manager, database, or server-side appl
 
 ## Hosting
 
+The public site is [https://whispersoflhj.org/](https://whispersoflhj.org/). `.htaccess` redirects `www.whispersoflhj.org` and `whispersoflhj.com` to that host and sends HTTP requests to HTTPS.
+
 The production server should support Apache `.htaccess` directives for:
 
 - HTTPS redirects
@@ -62,6 +64,14 @@ The production server should support Apache `.htaccess` directives for:
 - Security headers
 - Compression and browser caching
 - Redirects from previous page URLs
+
+## Benefit Brunch
+
+The October 10, 2026 brunch stays up through the end of that Saturday, US Central time. At midnight, the announcement comes down on its own.
+
+`/events/` then sends people home. The events page does that before it paints, and Apache redirects the URL with `noindex` so crawlers do not keep it. The date, place, and ticket copy can stay in `events/index.html`. After that night, the page is no longer served.
+
+The cutoff is `2026-10-11T05:00:00Z` in `script.js` and `events/index.html`. `.htaccess` uses `20261011060000`, which follows the server clock and falls on the morning after the brunch in US time zones. For a later event, change those three together and replace the copy on the events page.
 
 ## Privacy
 
