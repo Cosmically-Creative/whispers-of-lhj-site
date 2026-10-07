@@ -101,7 +101,8 @@
         align-items: center;
         justify-content: center;
         justify-self: end;
-        height: 4rem;
+        height: 4.4rem;
+        min-height: 4.4rem;
         padding: 0 1.6rem;
         line-height: 1;
         white-space: nowrap;
@@ -109,7 +110,9 @@
 
     .js .mobile-nav-toggle {
         display: inline-flex;
-        height: 4rem;
+        height: 4.4rem;
+        min-width: 4.4rem;
+        min-height: 4.4rem;
         padding-block: 0;
         font-size: 1.6rem;
         line-height: 1;
@@ -889,7 +892,9 @@
     }
 
     .quick-exit {
-        padding: 0.7rem 1rem;
+        min-width: 4.4rem;
+        min-height: 4.4rem;
+        padding: 1rem 1.2rem;
     }
 
     .nav-logo {
@@ -907,7 +912,9 @@
 
     .mobile-nav-toggle {
         gap: 0;
-        padding: 0 1rem;
+        min-width: 4.4rem;
+        min-height: 4.4rem;
+        padding: 0 1.2rem;
         font-size: 1.3rem;
     }
 

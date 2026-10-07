@@ -32,12 +32,14 @@
 
 :root {
     --color-white: #f7f9f9;
-    --color-teal: #587f89;
+    --color-teal: #486870;
     --color-black: #484848;
-    --color-green: #90aca6;
-    --color-bright-teal: #67a9aa;
+    --color-green: #57716b;
+    --color-bright-teal: #45787a;
     --color-gray: #acbfc4;
     --color-yellow: #ffe38b;
+    --color-on-teal-muted: #e0eaeb;
+    --hero-photo-scrim: rgba(247, 249, 249, 0.88);
 }
 
 * {
@@ -111,7 +113,14 @@ p {
 }
 
 .text-gray {
-    color: var(--color-gray) !important;
+    color: var(--color-green) !important;
+}
+
+.help-section .text-gray,
+.help-contact-card .text-gray,
+.section--teal .text-gray,
+.testimony-section .text-gray {
+    color: var(--color-on-teal-muted) !important;
 }
 
 .text-teal {
@@ -260,8 +269,11 @@ p {
 .quick-exit {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     justify-self: end;
-    padding: 0.7rem 1.4rem;
+    min-width: 4.4rem;
+    min-height: 4.4rem;
+    padding: 1rem 1.6rem;
     border: 0;
     border-radius: 50rem;
     color: var(--color-white);
@@ -428,7 +440,7 @@ p {
 
 .btn--secondary:hover,
 .btn--secondary:active {
-    background-color: var(--color-gray);
+    background-color: #3d4f4b;
 }
 
 .btn--yellow:link,
@@ -750,7 +762,7 @@ h1 em {
 }
 
 .disclaimer {
-    color: var(--color-gray);
+    color: var(--color-on-teal-muted);
     font-family: "Karla", sans-serif;
     font-size: 1.4rem;
 }
@@ -829,7 +841,7 @@ h1 em {
     justify-content: space-between;
     gap: 2rem;
     background-image:
-        linear-gradient(rgba(88, 127, 137, 0.85), rgba(88, 127, 137, 0.85)),
+        linear-gradient(rgba(72, 104, 112, 0.92), rgba(72, 104, 112, 0.92)),
         var(--link-card-image);
     background-position: center;
     background-size: cover;
@@ -848,7 +860,7 @@ h1 em {
 .link-card:hover {
     transform: scale(1.02);
     background-image:
-        linear-gradient(rgba(88, 127, 137, 0.9), rgba(88, 127, 137, 0.9)),
+        linear-gradient(rgba(72, 104, 112, 0.94), rgba(72, 104, 112, 0.94)),
         var(--link-card-image);
 }
 
@@ -979,7 +991,7 @@ footer {
 }
 
 .footer-contact-label {
-    color: var(--color-gray);
+    color: var(--color-on-teal-muted);
     font-family: "Karla", sans-serif;
     font-size: 1.3rem;
     font-weight: 600;
@@ -1020,7 +1032,7 @@ address {
     justify-content: space-between;
     gap: 2rem;
     flex-wrap: wrap;
-    color: var(--color-gray);
+    color: var(--color-on-teal-muted);
     text-transform: uppercase;
     font-family: "Karla", sans-serif;
     margin-top: 10rem;
@@ -1030,7 +1042,7 @@ address {
 }
 
 .copyright a {
-    color: var(--color-gray);
+    color: var(--color-on-teal-muted);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -1145,6 +1157,7 @@ button:focus-visible {
 
 .get-help-hero {
     position: relative;
+    isolation: isolate;
     display: flex;
     align-items: center;
     min-height: calc(100svh - 16rem);
@@ -1170,8 +1183,12 @@ button:focus-visible {
     left: -2rem;
     bottom: -1rem;
     z-index: -1;
-    content: url(../img/01-hero.jpeg);
-    opacity: 0.5;
+    width: min(78rem, 62vw);
+    aspect-ratio: 4 / 3;
+    background:
+        linear-gradient(var(--hero-photo-scrim), var(--hero-photo-scrim)),
+        url("../img/01-hero.jpeg") center / cover no-repeat;
+    content: "";
     -webkit-mask-image: radial-gradient(ellipse 102% 102% at bottom left, #000 0%, #000 82%, transparent 98%);
     mask-image: radial-gradient(ellipse 102% 102% at bottom left, #000 0%, #000 82%, transparent 98%);
     pointer-events: none;
@@ -1425,9 +1442,10 @@ button:focus-visible {
     z-index: -1;
     width: min(72rem, 60vw);
     aspect-ratio: 4 / 3;
-    background: url("../img/02-hero.jpeg") center / cover no-repeat;
+    background:
+        linear-gradient(var(--hero-photo-scrim), var(--hero-photo-scrim)),
+        url("../img/02-hero.jpeg") center / cover no-repeat;
     content: "";
-    opacity: 0.35;
     -webkit-mask-image: radial-gradient(ellipse 102% 102% at bottom left, #000 0%, #000 80%, transparent 98%);
     mask-image: radial-gradient(ellipse 102% 102% at bottom left, #000 0%, #000 80%, transparent 98%);
     pointer-events: none;
@@ -1779,9 +1797,10 @@ button:focus-visible {
     z-index: -1;
     width: min(92rem, 60vw);
     aspect-ratio: 4 / 3;
-    background: url("../img/03-hero.jpeg") center / cover no-repeat;
+    background:
+        linear-gradient(var(--hero-photo-scrim), var(--hero-photo-scrim)),
+        url("../img/03-hero.jpeg") center / cover no-repeat;
     content: "";
-    opacity: 0.25;
     -webkit-mask-image: radial-gradient(ellipse 102% 102% at bottom left, #000 0%, #000 80%, transparent 98%);
     mask-image: radial-gradient(ellipse 102% 102% at bottom left, #000 0%, #000 80%, transparent 98%);
     pointer-events: none;
@@ -2196,9 +2215,10 @@ button:focus-visible {
     z-index: -1;
     width: min(72rem, 60vw);
     aspect-ratio: 4 / 3;
-    background: url("../img/04-hero.jpeg") center / cover no-repeat;
+    background:
+        linear-gradient(var(--hero-photo-scrim), var(--hero-photo-scrim)),
+        url("../img/04-hero.jpeg") center / cover no-repeat;
     content: "";
-    opacity: 0.35;
     -webkit-mask-image: radial-gradient(ellipse 102% 102% at bottom left, #000 0%, #000 80%, transparent 98%);
     mask-image: radial-gradient(ellipse 102% 102% at bottom left, #000 0%, #000 80%, transparent 98%);
     pointer-events: none;
@@ -2475,9 +2495,10 @@ button:focus-visible {
     z-index: -1;
     width: min(62rem, 60vw);
     aspect-ratio: 1;
-    background: url("../img/05-hero.jpeg") center / cover no-repeat;
+    background:
+        linear-gradient(var(--hero-photo-scrim), var(--hero-photo-scrim)),
+        url("../img/05-hero.jpeg") center / cover no-repeat;
     content: "";
-    opacity: 0.35;
     -webkit-mask-image: radial-gradient(ellipse 102% 102% at bottom left, #000 0%, #000 80%, transparent 98%);
     mask-image: radial-gradient(ellipse 102% 102% at bottom left, #000 0%, #000 80%, transparent 98%);
     pointer-events: none;
@@ -2742,7 +2763,7 @@ button:focus-visible {
 }
 
 .staying-safe-contact-item span {
-    color: var(--color-gray);
+    color: var(--color-on-teal-muted);
     font-family: "Karla", sans-serif;
     font-size: 1.3rem;
     font-weight: 600;
@@ -2908,7 +2929,7 @@ button:focus-visible {
 }
 
 .leaving-checklist li + li {
-    border-top: 1px solid rgba(88, 127, 137, 0.35);
+    border-top: 1px solid rgba(72, 104, 112, 0.35);
 }
 
 .leaving-checklist li::before {
@@ -2944,9 +2965,10 @@ button:focus-visible {
     z-index: -1;
     width: min(62rem, 60vw);
     aspect-ratio: 4 / 3;
-    background: url("../img/07-hero.jpeg") center / cover no-repeat;
+    background:
+        linear-gradient(var(--hero-photo-scrim), var(--hero-photo-scrim)),
+        url("../img/07-hero.jpeg") center / cover no-repeat;
     content: "";
-    opacity: 0.35;
     -webkit-mask-image: radial-gradient(ellipse 102% 102% at bottom left, #000 0%, #000 80%, transparent 98%);
     mask-image: radial-gradient(ellipse 102% 102% at bottom left, #000 0%, #000 80%, transparent 98%);
     pointer-events: none;
@@ -3126,7 +3148,7 @@ button:focus-visible {
     border-left: 4px solid var(--color-yellow);
     font-size: 2.5rem;
     font-style: italic;
-    color: var(--color-gray)
+    color: var(--color-teal)
 }
 
 .shop-community-heading {
@@ -3196,7 +3218,7 @@ button:focus-visible {
 }
 
 .shop-visit-detail + .shop-visit-detail {
-    border-top: 1px solid rgba(88, 127, 137, 0.35);
+    border-top: 1px solid rgba(72, 104, 112, 0.35);
 }
 
 .shop-visit-detail span {

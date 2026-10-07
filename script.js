@@ -82,20 +82,29 @@ if (!eventIsActive() && isEventsPage()) {
     const href = `${"../".repeat(directoryDepth())}events/`;
 
     document.querySelectorAll(".announcement-message").forEach((message) => {
-        const link = document.createElement("a");
-        const date = document.createElement("span");
+        let link = message.querySelector(".announcement-link");
 
-        link.className = "announcement-link";
-        link.href = href;
-        link.append(eventAnnouncement.label, " ");
-        date.className = "text-yellow";
-        date.textContent = eventAnnouncement.date;
-        link.append(date);
+        if (!link) {
+            const date = document.createElement("span");
+
+            link = document.createElement("a");
+            link.className = "announcement-link";
+            link.href = href;
+            link.append(eventAnnouncement.label, " ");
+            date.className = "text-yellow";
+            date.textContent = eventAnnouncement.date;
+            link.append(date);
+            message.replaceChildren(link);
+        }
 
         if (isEventsPage()) link.setAttribute("aria-current", "page");
 
-        message.replaceChildren(link);
         message.closest(".announcement-bar")?.classList.add("announcement-bar--active");
+    });
+} else {
+    document.querySelectorAll(".announcement-message").forEach((message) => {
+        message.replaceChildren();
+        message.closest(".announcement-bar")?.classList.remove("announcement-bar--active");
     });
 }
 
