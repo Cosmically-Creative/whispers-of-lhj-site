@@ -1115,6 +1115,32 @@ button:focus-visible {
     box-shadow: 0 0 0 6px var(--color-yellow);
 }
 
+/* Animations */
+
+.js .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(3rem);
+    transition-property: opacity, transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+
+.js .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.js .btn.animate-on-scroll.visible:hover,
+.js .btn.animate-on-scroll.visible:active {
+    transform: scale(1.05);
+}
+
+.js .link-card.animate-on-scroll.visible:hover,
+.js .link-card.animate-on-scroll.visible:active {
+    transform: scale(1.02);
+}
+
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
@@ -1132,8 +1158,13 @@ button:focus-visible {
     .nav-link:active,
     .btn:hover,
     .btn:active,
-    .link-card:hover {
+    .link-card:hover,
+    .js .animate-on-scroll {
         transform: none;
+    }
+
+    .js .animate-on-scroll {
+        opacity: 1;
     }
 }
 

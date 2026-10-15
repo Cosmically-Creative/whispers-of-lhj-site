@@ -167,3 +167,21 @@ document.querySelectorAll(".nav").forEach((nav) => {
         if (!event.matches) setMenuState(false);
     });
 });
+
+// Scroll Animations
+document.addEventListener("DOMContentLoaded", () => {
+    const observerOptions = { root: null, rootMargin: "0px", threshold: 0.4 };
+    const onIntersection = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    };
+    const observer = new IntersectionObserver(onIntersection, observerOptions);
+    const elementsToAnimate = document.querySelectorAll(
+      ".animate-on-scroll",
+    );
+    elementsToAnimate.forEach((el) => observer.observe(el));
+  });
