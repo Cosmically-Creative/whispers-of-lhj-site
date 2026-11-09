@@ -65,13 +65,13 @@ The production server should support Apache `.htaccess` directives for:
 - Compression and browser caching
 - Redirects from previous page URLs
 
-## Benefit Brunch
+## Christmas Cookie Platters
 
-The October 10, 2026 brunch stays up through the end of that Saturday, US Central time. At midnight, the announcement comes down on its own.
+The cookie platter fundraiser stays up through Saturday, December 19, 2026, the last pickup morning, US Central time. At midnight, the announcement comes down on its own.
 
-`/events/` then sends people home. The events page does that before it paints, and Apache redirects the URL with `noindex` so crawlers do not keep it. The date, place, and ticket copy can stay in `events/index.html`. After that night, the page is no longer served.
+`/events/` then sends people home. The events page does that before it paints, and Apache redirects the URL with `noindex` so crawlers do not keep it.
 
-The cutoff is `2026-10-11T05:00:00Z` in `script.js` and `events/index.html`. `.htaccess` uses `20261011060000`, which follows the server clock and falls on the morning after the brunch in US time zones. For a later event, change those three together and replace the copy on the events page.
+The cutoff is `2026-12-20T06:00:00Z` in `script.js` and `events/index.html`. `.htaccess` uses `20261220070000`, which follows the server clock and falls on the morning after the last pickup in US time zones. For a later event, change those three together and replace the copy on the events page.
 
 ## Privacy
 

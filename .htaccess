@@ -14,12 +14,12 @@ ErrorDocument 404 /404.html
     RewriteCond %{HTTPS} !=on
     RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L,NE]
 
-    # Benefit brunch: after the morning of October 11, 2026 on the server clock,
+    # Christmas cookie platters: after the morning of December 20, 2026 on the server clock,
     # send /events/ home and mark that response noindex. %{TIME} follows the server
-    # timezone, so this is the morning after the brunch in US time zones.
-    # Keep 20261011060000 in sync with endsAt in script.js (2026-10-11T05:00:00Z).
-    RewriteCond expr "%{TIME} >= 20261011060000"
-    RewriteRule ^events(?:/index\.html)?/?$ / [R=302,L,E=brunch_over:1]
+    # timezone, so this is the morning after the last pickup in US time zones.
+    # Keep 20261220070000 in sync with endsAt in script.js (2026-12-20T06:00:00Z).
+    RewriteCond expr "%{TIME} >= 20261220070000"
+    RewriteRule ^events(?:/index\.html)?/?$ / [R=302,L,E=fundraiser_over:1]
 </IfModule>
 
 <IfModule mod_alias.c>
@@ -39,7 +39,7 @@ ErrorDocument 404 /404.html
     Header always set Strict-Transport-Security "max-age=31536000"
     Header always set X-Content-Type-Options "nosniff"
     Header always set X-Frame-Options "DENY"
-    Header always set X-Robots-Tag "noindex" env=brunch_over
+    Header always set X-Robots-Tag "noindex" env=fundraiser_over
 </IfModule>
 
 <IfModule mod_brotli.c>

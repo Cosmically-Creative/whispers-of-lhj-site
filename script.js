@@ -6,14 +6,14 @@ const QUICK_EXIT_URL = "https://www.google.com/";
 const QUICK_EXIT_KEY = "quick-exit";
 const MOBILE_NAV_QUERY = window.matchMedia("(max-width: 88em)");
 
-// Benefit Brunch stays up through Saturday, October 10, 2026, US Central time.
-// endsAt is midnight at the start of Sunday (CDT, UTC−5).
+// Cookie platters stay up through Saturday, December 19, 2026, US Central time.
+// endsAt is midnight at the start of Sunday (CST, UTC−6).
 // After that, the announcement comes down and /events/ sends visitors home.
-// Keep this instant in sync with the events page head script and the .htaccess brunch rule.
+// Keep this instant in sync with the events page head script and the .htaccess rule.
 const eventAnnouncement = {
-    label: "Benefit Brunch",
-    date: "Oct 10",
-    endsAt: "2026-10-11T05:00:00Z",
+    label: "Cookie Platters",
+    date: "Dec 12 & 19",
+    endsAt: "2026-12-20T06:00:00Z",
 };
 
 function eventIsActive() {
